@@ -3,6 +3,7 @@
 .settings/
 .project
 screenshots/
+target/
 
 .classpath
 .allure/
