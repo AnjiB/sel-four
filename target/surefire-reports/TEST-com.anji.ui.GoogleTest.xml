@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.anji.ui.GoogleTest" time="5.226" tests="2" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/anjiboddupally/MyWorkspaces/sel-four/target/test-classes:/Users/anjiboddupally/MyWorkspaces/sel-four/target/classes:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-java/4.24.0/selenium-java-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-api/4.24.0/selenium-api-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.24.0/selenium-chrome-driver-4.24.0.jar:/Users/anjiboddupally/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.24.0/selenium-chromium-driver-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-json/4.24.0/selenium-json-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.24.0/selenium-manager-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v126/4.24.0/selenium-devtools-v126-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v127/4.24.0/selenium-devtools-v127-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v128/4.24.0/selenium-devtools-v128-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.24.0/selenium-devtools-v85-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.24.0/selenium-edge-driver-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.24.0/selenium-firefox-driver-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-http/4.24.0/selenium-http-4.24.0.jar:/Users/anjiboddupally/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.24.0/selenium-ie-driver-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.24.0/selenium-remote-driver-4.24.0.jar:/Users/anjiboddupally/.m2/repository/com/google/guava/guava/33.3.0-jre/guava-33.3.0-jre.jar:/Users/anjiboddupally/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/anjiboddupally/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/anjiboddupally/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/anjiboddupally/.m2/repository/org/checkerframework/checker-qual/3.43.0/checker-qual-3.43.0.jar:/Users/anjiboddupally/.m2/repository/com/google/errorprone/error_prone_annotations/2.28.0/error_prone_annotations-2.28.0.jar:/Users/anjiboddupally/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-api/1.41.0/opentelemetry-api-1.41.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-context/1.41.0/opentelemetry-context-1.41.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.41.0/opentelemetry-exporter-logging-1.41.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.41.0/opentelemetry-sdk-common-1.41.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.41.0/opentelemetry-sdk-extension-autoconfigure-spi-1.41.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.41.0/opentelemetry-sdk-extension-autoconfigure-1.41.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.41.0-alpha/opentelemetry-api-incubator-1.41.0-alpha.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.41.0/opentelemetry-sdk-trace-1.41.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.41.0/opentelemetry-sdk-1.41.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.41.0/opentelemetry-sdk-metrics-1.41.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.41.0/opentelemetry-sdk-logs-1.41.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-os/4.24.0/selenium-os-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.24.0/selenium-safari-driver-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-support/4.24.0/selenium-support-4.24.0.jar:/Users/anjiboddupally/.m2/repository/commons-io/commons-io/2.16.1/commons-io-2.16.1.jar:/Users/anjiboddupally/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.11.0/junit-jupiter-engine-5.11.0.jar:/Users/anjiboddupally/.m2/repository/org/junit/platform/junit-platform-engine/1.11.0/junit-platform-engine-1.11.0.jar:/Users/anjiboddupally/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/anjiboddupally/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.11.0/junit-jupiter-params-5.11.0.jar:/Users/anjiboddupally/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.0/junit-jupiter-api-5.11.0.jar:/Users/anjiboddupally/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/anjiboddupally/.m2/repository/org/junit/platform/junit-platform-commons/1.11.0/junit-platform-commons-1.11.0.jar:/Users/anjiboddupally/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/anjiboddupally/.m2/repository/net/bytebuddy/byte-buddy/1.12.21/byte-buddy-1.12.21.jar:/Users/anjiboddupally/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar:/Users/anjiboddupally/.m2/repository/io/qameta/allure/allure-junit5/2.17.3/allure-junit5-2.17.3.jar:/Users/anjiboddupally/.m2/repository/io/qameta/allure/allure-junit-platform/2.17.3/allure-junit-platform-2.17.3.jar:/Users/anjiboddupally/.m2/repository/io/qameta/allure/allure-java-commons/2.17.3/allure-java-commons-2.17.3.jar:/Users/anjiboddupally/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/anjiboddupally/.m2/repository/io/qameta/allure/allure-model/2.17.3/allure-model-2.17.3.jar:/Users/anjiboddupally/.m2/repository/io/qameta/allure/allure-test-filter/2.17.3/allure-test-filter-2.17.3.jar:/Users/anjiboddupally/.m2/repository/org/junit/platform/junit-platform-launcher/1.8.2/junit-platform-launcher-1.8.2.jar:"/>
+    <property name="java.vm.vendor" value="Azul Systems, Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://www.azul.com/"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/anjiboddupally/MyWorkspaces/sel-four/target/surefire/surefirebooter-20241003223939282_3.jar /Users/anjiboddupally/MyWorkspaces/sel-four/target/surefire 2024-10-03T22-39-39_165-jvmRun1 surefire-20241003223939282_1tmp surefire_0-20241003223939282_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/anjiboddupally/MyWorkspaces/sel-four/target/test-classes:/Users/anjiboddupally/MyWorkspaces/sel-four/target/classes:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-java/4.24.0/selenium-java-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-api/4.24.0/selenium-api-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.24.0/selenium-chrome-driver-4.24.0.jar:/Users/anjiboddupally/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.24.0/selenium-chromium-driver-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-json/4.24.0/selenium-json-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.24.0/selenium-manager-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v126/4.24.0/selenium-devtools-v126-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v127/4.24.0/selenium-devtools-v127-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v128/4.24.0/selenium-devtools-v128-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.24.0/selenium-devtools-v85-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.24.0/selenium-edge-driver-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.24.0/selenium-firefox-driver-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-http/4.24.0/selenium-http-4.24.0.jar:/Users/anjiboddupally/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.24.0/selenium-ie-driver-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.24.0/selenium-remote-driver-4.24.0.jar:/Users/anjiboddupally/.m2/repository/com/google/guava/guava/33.3.0-jre/guava-33.3.0-jre.jar:/Users/anjiboddupally/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/anjiboddupally/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/anjiboddupally/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/anjiboddupally/.m2/repository/org/checkerframework/checker-qual/3.43.0/checker-qual-3.43.0.jar:/Users/anjiboddupally/.m2/repository/com/google/errorprone/error_prone_annotations/2.28.0/error_prone_annotations-2.28.0.jar:/Users/anjiboddupally/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-api/1.41.0/opentelemetry-api-1.41.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-context/1.41.0/opentelemetry-context-1.41.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.41.0/opentelemetry-exporter-logging-1.41.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.41.0/opentelemetry-sdk-common-1.41.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.41.0/opentelemetry-sdk-extension-autoconfigure-spi-1.41.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.41.0/opentelemetry-sdk-extension-autoconfigure-1.41.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.41.0-alpha/opentelemetry-api-incubator-1.41.0-alpha.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.41.0/opentelemetry-sdk-trace-1.41.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.41.0/opentelemetry-sdk-1.41.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.41.0/opentelemetry-sdk-metrics-1.41.0.jar:/Users/anjiboddupally/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.41.0/opentelemetry-sdk-logs-1.41.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-os/4.24.0/selenium-os-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.24.0/selenium-safari-driver-4.24.0.jar:/Users/anjiboddupally/.m2/repository/org/seleniumhq/selenium/selenium-support/4.24.0/selenium-support-4.24.0.jar:/Users/anjiboddupally/.m2/repository/commons-io/commons-io/2.16.1/commons-io-2.16.1.jar:/Users/anjiboddupally/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.11.0/junit-jupiter-engine-5.11.0.jar:/Users/anjiboddupally/.m2/repository/org/junit/platform/junit-platform-engine/1.11.0/junit-platform-engine-1.11.0.jar:/Users/anjiboddupally/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/anjiboddupally/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.11.0/junit-jupiter-params-5.11.0.jar:/Users/anjiboddupally/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.0/junit-jupiter-api-5.11.0.jar:/Users/anjiboddupally/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/anjiboddupally/.m2/repository/org/junit/platform/junit-platform-commons/1.11.0/junit-platform-commons-1.11.0.jar:/Users/anjiboddupally/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/anjiboddupally/.m2/repository/net/bytebuddy/byte-buddy/1.12.21/byte-buddy-1.12.21.jar:/Users/anjiboddupally/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar:/Users/anjiboddupally/.m2/repository/io/qameta/allure/allure-junit5/2.17.3/allure-junit5-2.17.3.jar:/Users/anjiboddupally/.m2/repository/io/qameta/allure/allure-junit-platform/2.17.3/allure-junit-platform-2.17.3.jar:/Users/anjiboddupally/.m2/repository/io/qameta/allure/allure-java-commons/2.17.3/allure-java-commons-2.17.3.jar:/Users/anjiboddupally/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/anjiboddupally/.m2/repository/io/qameta/allure/allure-model/2.17.3/allure-model-2.17.3.jar:/Users/anjiboddupally/.m2/repository/io/qameta/allure/allure-test-filter/2.17.3/allure-test-filter-2.17.3.jar:/Users/anjiboddupally/.m2/repository/org/junit/platform/junit-platform-launcher/1.8.2/junit-platform-launcher-1.8.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/anjiboddupally"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-07-18"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/anjiboddupally/MyWorkspaces/sel-four"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/Users/anjiboddupally/MyWorkspaces/sel-four/target/surefire/surefirebooter-20241003223939282_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="17.0.8+7-LTS"/>
+    <property name="user.name" value="anjiboddupally"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="12.7.2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Zulu17.44+15-CA"/>
+    <property name="localRepository" value="/Users/anjiboddupally/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://www.azul.com/support/"/>
+    <property name="java.io.tmpdir" value="/var/folders/bm/jddgm_0x4xl1x8hw_ckf748m0000gn/T/"/>
+    <property name="java.version" value="17.0.8"/>
+    <property name="user.dir" value="/Users/anjiboddupally/MyWorkspaces/sel-four"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/anjiboddupally/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Azul Systems, Inc."/>
+    <property name="java.vm.version" value="17.0.8+7-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testFacebookPageTitle" classname="com.anji.ui.GoogleTest" time="4.949">
+    <failure message="&#10;expected: &quot;Google&quot;&#10; but was: &quot;Facebook – log in or sign up&quot;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+
+expected: "Google"
+ but was: "Facebook – log in or sign up"
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at com.anji.ui.GoogleTest.testFacebookPageTitle(GoogleTest.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:766)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:202)
+	at java.base/java.util.concurrent.RecursiveAction.exec(RecursiveAction.java:194)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+]]></failure>
+    <system-out><![CDATA[ForkJoinPool-1-worker-2
+ForkJoinPool-1-worker-3
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Oct 03, 2024 10:39:44 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 129, returning the closest version; found: 128; Please update to a Selenium version that supports CDP version 129
+Oct 03, 2024 10:39:44 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 129, returning the closest version; found: 128; Please update to a Selenium version that supports CDP version 129
+]]></system-err>
+  </testcase>
+  <testcase name="testGooglePageTitle" classname="com.anji.ui.GoogleTest" time="5.114">
+    <failure message="&#10;expected: &quot;Facebook&quot;&#10; but was: &quot;Google&quot;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+
+expected: "Facebook"
+ but was: "Google"
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at com.anji.ui.GoogleTest.testGooglePageTitle(GoogleTest.java:23)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:766)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:202)
+	at java.base/java.util.concurrent.RecursiveAction.exec(RecursiveAction.java:194)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+]]></failure>
+  </testcase>
+</testsuite>

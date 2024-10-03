@@ -1,6 +1,12 @@
 # Compiled class file
 *.class
+.settings/
+.project
+screenshots/
 
+.classpath
+.allure/
+allure-results/
 # Log file
 *.log
 
