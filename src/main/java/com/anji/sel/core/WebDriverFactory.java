@@ -9,29 +9,16 @@ import org.openqa.selenium.safari.SafariDriver;
 public class WebDriverFactory {
 
   public static WebDriver getDriver(String browser) {
-    return getMeTheDriver(browser);
+    return getDriverInstance(browser);
   }
 
-  private static WebDriver getMeTheDriver(String browser) {
-
-    return switch (browser.toLowerCase()) {
-      case "chrome" -> {
-        yield new ChromeDriver();
-      }
-
-      case "firefox" -> {
-        yield new FirefoxDriver();
-      }
-
-      case "ie" -> {
-        yield new InternetExplorerDriver();
-      }
-
-      case "safari" -> {
-        yield new SafariDriver();
-      }
-
-      default -> throw new IllegalArgumentException("Unexpected value: " + browser);
-    };
+  public static WebDriver getDriverInstance(String browser) {
+      return switch (browser.toLowerCase()) {
+          case "chrome" -> new ChromeDriver();
+          case "firefox" -> new FirefoxDriver();
+          case "ie" -> new InternetExplorerDriver();
+          case "safari" -> new SafariDriver();
+          default -> throw new IllegalArgumentException("Unexpected value: " + browser);
+      };
   }
 }

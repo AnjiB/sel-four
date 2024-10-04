@@ -10,11 +10,11 @@
     <junit.jupiter.version>5.11.0</junit.jupiter.version>
     <junit.platform.version>1.9.1</junit.platform.version>
     <aspectj.version>1.9.8</aspectj.version>
-    <allure.version>2.17.3</allure.version>
+    <allure.junit5.version>2.15.0</allure.junit5.version>
     <spotless.version>2.41.1</spotless.version>
+    <allure.maven.version>2.10.0</allure.maven.version>
   </properties>
 
-  
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
@@ -67,7 +67,7 @@
     <dependency>
       <groupId>io.qameta.allure</groupId>
       <artifactId>allure-junit5</artifactId>
-      <version>${allure.version}</version>
+      <version>${allure.junit5.version}</version>
     </dependency>
 
   </dependencies>
@@ -89,6 +89,12 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.1.2</version>
         <configuration>
+          <systemProperties>
+            <allure.results.directory>target/allure-results</allure.results.directory>
+          </systemProperties>
+          <properties>
+            <listener>io.qameta.allure.junit5.AllureJunit5</listener>
+          </properties>
           <argLine>-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"</argLine>
         </configuration>
         <dependencies>
@@ -99,12 +105,16 @@
           </dependency>
         </dependencies>
       </plugin>
-      
+
       <plugin>
-	<groupId>io.qameta.allure</groupId>
-	<artifactId>allure-maven</artifactId>
-	<version>2.12.0</version>
-</plugin>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-maven</artifactId>
+        <version>${allure.maven.version}</version>
+        <configuration>
+          <reportDirectory>${basedir}/target/allure-report</reportDirectory>
+        </configuration>
+
+      </plugin>
 
       <plugin>
         <groupId>com.diffplug.spotless</groupId>
