@@ -21,6 +21,9 @@ class UISecurityTest {
 	private LoginPage loginPage;
 
 	private HomePage homePage;
+	
+	// register a user on https://parabank.parasoft.com/parabank/index.htm 
+	// and update username and password variables for demo
 
 	private static final String USERNAME = "";
 
@@ -80,5 +83,11 @@ class UISecurityTest {
 		loginPage.loginValidUser("admin", "OR 1=1");
 		homePage = new HomePage(this.driver);
 		Assertions.assertThat(homePage.getUsernameWE().isDisplayed()).isTrue();
+		
+		/*
+		 * WebElement searchBox = driver.findElement(By.name("search"));
+		 * searchBox.sendKeys("'; DROP TABLE users; --"); searchBox.submit();
+		 */
+
 	}
 }
