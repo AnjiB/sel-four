@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 
 @SeleniumWebDriver
-public class GoogleTest {
+class GoogleTest {
 
   private WebDriver driver;
 
@@ -17,14 +17,14 @@ public class GoogleTest {
   }
 
   @Test
-  public void testGooglePageTitle() {
+  void testGooglePageTitle() {
     System.out.println(Thread.currentThread().getName());
     driver.get("https://www.google.com");
     Assertions.assertThat(driver.getTitle()).isEqualTo("Facebook");
   }
 
   @Test
-  public void testFacebookPageTitle() {
+  void testFacebookPageTitle() {
     System.out.println(Thread.currentThread().getName());
     driver.get("https://www.facebook.com");
     Assertions.assertThat(driver.getTitle()).isEqualTo("Google");
