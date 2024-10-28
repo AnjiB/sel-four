@@ -1,8 +1,12 @@
 package com.anji.ui;
 
 import com.anji.sel.annotation.SeleniumWebDriver;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -22,23 +26,44 @@ public class SecureHeadersTest {
   }
 
   @Test
-  void networkTest() {
+  void networkTest() throws InterruptedException {
     try (DevTools devTools = ((ChromeDriver) driver).getDevTools()) {
       devTools.createSession();
       devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
-
-      SoftAssertions softAssertions = new SoftAssertions();
+      List<SoftAssertions> assertionsList = new ArrayList<>();
+      CompletableFuture<Void> headersProcessed = new CompletableFuture<>();
       devTools.addListener(
           Network.responseReceived(),
           response -> {
-            Map<String, Object> headers = response.getResponse().getHeaders();
-            softAssertions.assertThat(headers.containsKey("Strict-Transport-Security")).isTrue();
-            softAssertions.assertThat(headers.containsKey("Content-Security-Policy")).isTrue();
-            softAssertions.assertThat(headers.containsKey("X-XSS-Protection")).isTrue();
-            softAssertions.assertThat(headers.containsKey("X-Frame-Options")).isTrue();
+            Map<String, Object> headers = new HashMap<>(response.getResponse().getHeaders());
+            SoftAssertions softAssertions = new SoftAssertions();
+            String urlMessage = "Header missing for URL:" + response.getResponse().getUrl();
+            softAssertions
+                .assertThat(headers.containsKey("Strict-Transport-Security"))
+                .as(urlMessage)
+                .isTrue();
+            softAssertions
+                .assertThat(headers.containsKey("Content-Security-Policy"))
+                .as(urlMessage)
+                .isTrue();
+            softAssertions
+                .assertThat(headers.containsKey("X-XSS-Protection"))
+                .as(urlMessage)
+                .isTrue();
+            softAssertions
+                .assertThat(headers.containsKey("X-Frame-Options"))
+                .as(urlMessage)
+                .isTrue();
+            synchronized (assertionsList) {
+              assertionsList.add(softAssertions);
+            }
+            headersProcessed.complete(null);
           });
-      softAssertions.assertAll();
+
       driver.get("https://automationexercise.com/");
+
+      headersProcessed.join(); //
+      assertionsList.forEach(softly -> softly.assertAll());
     }
   }
 }
