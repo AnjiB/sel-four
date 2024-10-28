@@ -28,7 +28,7 @@
   </properties>
 
   <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
@@ -40,14 +40,13 @@
       <artifactId>awaitility</artifactId>
       <version>${awaitility.version}</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
       <version>${commons.io.version}</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.json/json -->
     <dependency>
       <groupId>org.json</groupId>
       <artifactId>json</artifactId>
@@ -72,7 +71,6 @@
       <version>${junit.jupiter.version}</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
     <dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
@@ -80,14 +78,12 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
       <version>${jackson-databind.version}</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
@@ -161,22 +157,19 @@
           <java>
             <googleJavaFormat>
               <version>${spotless.google.format.version}</version>
-              <!-- This version works with Java 17 -->
             </googleJavaFormat>
           </java>
           <pom>
-            <!-- These are the defaults, you can override if you want -->
             <includes>
               <include>pom.xml</include>
             </includes>
             <sortPom></sortPom>
-            <!-- has its own section below -->
           </pom>
         </configuration>
         <executions>
           <execution>
             <goals>
-              <goal>apply</goal>
+              <goal>check</goal>
             </goals>
           </execution>
         </executions>
