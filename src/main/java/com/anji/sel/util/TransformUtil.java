@@ -19,7 +19,7 @@ public class TransformUtil {
               return MetricDto.builder()
                   .document(hostBaseUrl)
                   .name(metric.getName())
-                  .value(metric.getValue().doubleValue())
+                  .value(metric.getValue().doubleValue()/1000.0)
                   .build();
             })
         .toList();
@@ -37,57 +37,57 @@ public class TransformUtil {
             MetricDto.builder()
                 .document(lightHouseResponse.getRequestedUrl())
                 .name(lightHouseResponse.getCategories().getPerformance().getId())
-                .value(lightHouseResponse.getCategories().getPerformance().getScore())
+                .value(lightHouseResponse.getCategories().getPerformance().getScore()*100)
                 .build(),
             MetricDto.builder()
                 .document(lightHouseResponse.getRequestedUrl())
                 .name(lightHouseResponse.getCategories().getAccessibility().getId())
-                .value(lightHouseResponse.getCategories().getAccessibility().getScore())
+                .value(lightHouseResponse.getCategories().getAccessibility().getScore()*100)
                 .build(),
             MetricDto.builder()
                 .document(lightHouseResponse.getRequestedUrl())
                 .name(lightHouseResponse.getAudits().getCumulativeLayoutShift().getId())
-                .value(lightHouseResponse.getAudits().getCumulativeLayoutShift().getNumericValue())
+                .value(lightHouseResponse.getAudits().getCumulativeLayoutShift().getNumericValue()/1000.0)
                 .build(),
             MetricDto.builder()
                 .document(lightHouseResponse.getRequestedUrl())
                 .name(lightHouseResponse.getAudits().getFirstContentfulPaint().getId())
-                .value(lightHouseResponse.getAudits().getFirstContentfulPaint().getNumericValue())
+                .value(lightHouseResponse.getAudits().getFirstContentfulPaint().getNumericValue()/1000.0)
                 .build(),
             MetricDto.builder()
                 .document(lightHouseResponse.getRequestedUrl())
                 .name(lightHouseResponse.getAudits().getLargestContentfulPaint().getId())
-                .value(lightHouseResponse.getAudits().getLargestContentfulPaint().getNumericValue())
+                .value(lightHouseResponse.getAudits().getLargestContentfulPaint().getNumericValue()/1000.0)
                 .build(),
             MetricDto.builder()
                 .document(lightHouseResponse.getRequestedUrl())
                 .name(lightHouseResponse.getAudits().getFirstMeaningfulPaint().getId())
-                .value(lightHouseResponse.getAudits().getFirstMeaningfulPaint().getNumericValue())
+                .value(lightHouseResponse.getAudits().getFirstMeaningfulPaint().getNumericValue()/1000.0)
                 .build(),
             MetricDto.builder()
                 .document(lightHouseResponse.getRequestedUrl())
                 .name(lightHouseResponse.getAudits().getSpeedIndex().getId())
-                .value(lightHouseResponse.getAudits().getSpeedIndex().getNumericValue())
+                .value(lightHouseResponse.getAudits().getSpeedIndex().getNumericValue()/1000.0)
                 .build(),
             MetricDto.builder()
                 .document(lightHouseResponse.getRequestedUrl())
                 .name(lightHouseResponse.getAudits().getTotalBlockingTime().getId())
-                .value(lightHouseResponse.getAudits().getTotalBlockingTime().getNumericValue())
+                .value(lightHouseResponse.getAudits().getTotalBlockingTime().getNumericValue()/1000.0)
                 .build(),
             MetricDto.builder()
                 .document(lightHouseResponse.getRequestedUrl())
                 .name(lightHouseResponse.getAudits().getServerResponseTime().getId())
-                .value(lightHouseResponse.getAudits().getServerResponseTime().getNumericValue())
+                .value(lightHouseResponse.getAudits().getServerResponseTime().getNumericValue()/1000.0)
                 .build(),
             MetricDto.builder()
                 .document(lightHouseResponse.getRequestedUrl())
                 .name(lightHouseResponse.getAudits().getUsesLongCacheTtl().getId())
-                .value(lightHouseResponse.getAudits().getUsesLongCacheTtl().getNumericValue())
+                .value(lightHouseResponse.getAudits().getUsesLongCacheTtl().getNumericValue()/1000.0)
                 .build(),
             MetricDto.builder()
                 .document(lightHouseResponse.getRequestedUrl())
                 .name(lightHouseResponse.getAudits().getTotalByteWeight().getId())
-                .value(lightHouseResponse.getAudits().getTotalByteWeight().getNumericValue())
+                .value(lightHouseResponse.getAudits().getTotalByteWeight().getNumericValue()/1000.0)
                 .build());
 
     return lightHouseMetrics;
