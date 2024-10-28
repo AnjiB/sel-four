@@ -1,6 +1,6 @@
 package com.anji.ui;
 
-import com.anji.sel.core.SeleniumWebDriver;
+import com.anji.sel.annotation.SeleniumWebDriver;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

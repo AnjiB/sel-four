@@ -6,32 +6,32 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasePage {
 
-	private By usernameBy = By.name("username");
+  private By usernameBy = By.name("username");
 
-	private By passwordBy = By.name("password");
+  private By passwordBy = By.name("password");
 
-	private By loginBy = By.cssSelector("input[value='Log In']");
+  private By loginBy = By.cssSelector("input[value='Log In']");
 
-	public LoginPage(WebDriver driver) {
-		super(driver);
-	}
+  public LoginPage(WebDriver driver) {
+    super(driver);
+  }
 
-	public void navigate() {
-		this.driver.get("https://parabank.parasoft.com/parabank/index.htm");
-	}
+  public void navigate() {
+    this.driver.get("https://parabank.parasoft.com/parabank/index.htm");
+  }
 
-	public String getTitle() {
-		return this.driver.getTitle();
-	}
+  public String getTitle() {
+    return this.driver.getTitle();
+  }
 
-	public void loginValidUser(String userName, String password) {
+  public void loginValidUser(String userName, String password) {
 
-		this.driver.findElement(usernameBy).sendKeys(userName);
-		this.getPasswordWE().sendKeys(password);
-		this.driver.findElement(loginBy).click();
-	}
+    this.driver.findElement(usernameBy).sendKeys(userName);
+    this.getPasswordWE().sendKeys(password);
+    this.driver.findElement(loginBy).click();
+  }
 
-	public WebElement getPasswordWE() {
-		return this.driver.findElement(passwordBy);
-	}
+  public WebElement getPasswordWE() {
+    return this.driver.findElement(passwordBy);
+  }
 }
