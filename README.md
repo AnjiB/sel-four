@@ -10,7 +10,7 @@
 - Docker Desktop
 - An IDE - IntelliJ / Eclipse or something similar
 
-## Webdriver management using Junit5 Lifecycle Callbacks
+# Webdriver management using Junit5 Lifecycle Callbacks
 
 Please refer to my medium article : https://medium.com/@boddupally.anji/streamlining-webdriver-management-in-ui-testing-a-junit-5-approach-with-annotations-e4b0d34af39f
 
@@ -18,7 +18,7 @@ Please refer to my medium article : https://medium.com/@boddupally.anji/streamli
 
 The general, we start functional testing as soon as development starts and with shift left approach, we try to embed Unit and Integration tests in CI pipelines to get faster feebdack about functionality of software we develop. While this is great practice, cost effective, we can also include security testing in functional testing which will help us to identify Security Vulnerabilities early in development process. We can leverage our functional tests with minimal setup to carry security testing, will achieve greater benefit.
 
-# 1. Cross-Site Scripting (XSS)
+## 1. Cross-Site Scripting (XSS)
 
 In XSS, an attacker sends malicious script to an end user. Once the script is executed, attacker may steal cookies, session tokens an other sensitive information and sometimes, script may modifiy the content of the webpage.
 
@@ -46,7 +46,7 @@ When we write UI tests, we can pass various types of XSS strigs to all input fie
 
 Refer: https://owasp.org/www-community/attacks/xss/
   
-# 2. Masking of sensitive information
+## 2. Masking of sensitive information
 
 When entering sensitive information, such as passwords, on a web page, it is essential to ensure it is masked. If this information isn’t masked, the browser may store it, potentially allowing other users with access to the device to view it, and leaving it vulnerable to hackers who could easily steal it.
 
@@ -63,7 +63,7 @@ When we write UI tests, we can pass various types of XSS strigs to all input fie
     }
    ````
    
-# 3. SQL Injection
+## 3. SQL Injection
 
 A SQL injection attack consists of insertion or “injection” of a SQL query via the input data from the client to the application. A successful SQL injection exploit can read sensitive data from the database, modify database data (Insert/Update/Delete), execute administration operations on the database (such as shutdown the DBMS), recover the content of a given file present on the DBMS file system and in some cases issue commands to the operating system. SQL injection attacks are a type of injection attack, in which SQL commands are injected into data-plane input in order to affect the execution of predefined SQL commands.
 
@@ -86,13 +86,13 @@ Refer:
 2. https://owasp.org/www-community/attacks/SQL_Injection
 
 
-# 4. Secure Cookies
+## 4. Secure Cookies
 
 We must ensure that cookies containing sensitive information are marked as secure and can only be transmitted over HTTPS. Additionally, they should be marked as HttpOnly to prevent client-side scripts from accessing them. If a cookie is not secure or HttpOnly, the application may include this information in unsecure HTTP requests, allowing attackers to intercept the insecure connection and steal valuable information from the session cookies or manipulate them via XSS attacks.
 
-- Secure Attribute: This attribute ensures that the cookie is only sent over HTTPS connections. Cookies with this attribute will not be included in HTTP requests at all.
+- **Secure Attribute:** This attribute ensures that the cookie is only sent over HTTPS connections. Cookies with this attribute will not be included in HTTP requests at all.
 
-- HttpOnly Attribute: This attribute allows the cookie to be transmitted over both HTTP and HTTPS but prevents access through client-side scripts.
+- **HttpOnly Attribute:** This attribute allows the cookie to be transmitted over both HTTP and HTTPS but prevents access through client-side scripts.
 
 ### How to write Secure Cookies tests in Selenium UI tests?
 
@@ -107,7 +107,7 @@ We must ensure that cookies containing sensitive information are marked as secur
 
    ```
  
-# 5. Session Cookie Manipulation
+## 5. Session Cookie Manipulation
 
 Session cookies play a critical role in the functioning of web applications by facilitating the management of user sessions. Here are the key reasons why session cookies are important:
 
