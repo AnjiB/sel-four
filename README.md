@@ -16,7 +16,7 @@ Please refer to my medium article : https://medium.com/@boddupally.anji/streamli
 
 # Embedding security testing in Selenium Functional tests
 
-The general, we start functional testing as soon as development starts and with shift left approach, we try to embed Unit and Integration tests in CI pipelines to get faster feebdack about functionality of software we develop. While this is great practice, cost effective, we can also include security testing in functional testing which will help us to identify Security Vulnerabilities early in development process. We can leverage our functional tests with minimal setup to carry security testing, will achieve greater benefit.
+In general, we start functional testing as soon as development starts and with a shift left approach, we try to embed Unit and Integration tests in CI pipelines to get faster feedback about functionality of software we develop. While this is great practice, cost effective, we can also include security testing in functional testing which will help us to identify Security Vulnerabilities early in the development process. We can leverage our functional tests with minimal setup to carry security testing, and will achieve greater benefit.
 
 ## 1. Cross-Site Scripting (XSS)
 
