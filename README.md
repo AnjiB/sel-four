@@ -142,10 +142,74 @@ Session cookies play a critical role in the functioning of web applications by f
 		Assertions.assertThat(homePage.getUsername()).contains(USERNAME);
 		driver.manage().deleteCookie(driver.manage().getCookieNamed("JSESSIONID"));
 		driver.navigate().refresh();
+		// should redirect the user to login page
 		loginPage.loginValidUser(USERNAME, PASSWORD);
     }
     
    ```
+ 
+## 6. Secure Headers
+
+- Selenium 4 offers a feature to interact with CDP (Chrome Devtools Protocol). CDP provides a way to communicate directly with Chrome or Chrome based browsers to access the features that are typically accessible through DevTools UI. These features include network interception, performance monitoring etc.
+
+- We can leverage features of CDP to carry out few security checks on API headers.
+
+- **Strict-Transport-Security:** This header tells web browsers that they should only communicate with a resource over HTTPS (the secure version of HTTP). It prevents users from accidentally accessing the site through an insecure connection (HTTP)
+
+- **Content-Security-Policy:** This header helps protect a website from certain types of attacks, such as cross-site scripting (XSS), by specifying which content sources are allowed. It tells the browser where it can load resources (like images, scripts, or styles) from.
+
+- **X-XSS-Protection:** This header is a basic security feature in web browsers that helps detect and block reflected XSS attacks. If the browser sees this header, it will try to filter out malicious scripts from being executed.
+
+- **X-Frame-Options:** This header prevents a website from being displayed in a frame or iframe on another site. This is important because attackers can use frames to trick users into clicking on something different from what they think they’re clicking on (like a fake login form).
+
+
+### How to include session management tests in Selenium UI tests?
+
+   ```
+   @Test
+  void networkTest() throws InterruptedException {
+    try (DevTools devTools = ((ChromeDriver) driver).getDevTools()) {
+      devTools.createSession();
+      devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
+      List<SoftAssertions> assertionsList = new ArrayList<>();
+      CompletableFuture<Void> headersProcessed = new CompletableFuture<>();
+      devTools.addListener(
+          Network.responseReceived(),
+          response -> {
+            Map<String, Object> headers = new HashMap<>(response.getResponse().getHeaders());
+            SoftAssertions softAssertions = new SoftAssertions();
+            String urlMessage = "Header missing for URL:" + response.getResponse().getUrl();
+            softAssertions
+                .assertThat(headers.containsKey("Strict-Transport-Security"))
+                .as(urlMessage)
+                .isTrue();
+            softAssertions
+                .assertThat(headers.containsKey("Content-Security-Policy"))
+                .as(urlMessage)
+                .isTrue();
+            softAssertions
+                .assertThat(headers.containsKey("X-XSS-Protection"))
+                .as(urlMessage)
+                .isTrue();
+            softAssertions
+                .assertThat(headers.containsKey("X-Frame-Options"))
+                .as(urlMessage)
+                .isTrue();
+            synchronized (assertionsList) {
+              assertionsList.add(softAssertions);
+            }
+            headersProcessed.complete(null);
+          });
+
+      driver.get("https://automationexercise.com/");
+
+      headersProcessed.join(); //
+      assertionsList.forEach(softly -> softly.assertAll());
+    }
+  }
+    
+   ```
+ 
 
 
 
