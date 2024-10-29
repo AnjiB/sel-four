@@ -99,10 +99,10 @@ We must ensure that cookies containing sensitive information are marked as secur
    ```
    @Test
    void secureCookiesTest() {
-	loginPage.loginValidUser(USERNAME, PASSWORD);
-	Cookie sessionCukki = driver.manage().getCookieNamed("JSESSIONID");
-	Assertions.assertThat(sessionCukki.isHttpOnly()).isTrue();
-	Assertions.assertThat(sessionCukki.isSecure()).isTrue();
+		loginPage.loginValidUser(USERNAME, PASSWORD);
+		Cookie sessionCukki = driver.manage().getCookieNamed("JSESSIONID");
+		Assertions.assertThat(sessionCukki.isHttpOnly()).isTrue();
+		Assertions.assertThat(sessionCukki.isSecure()).isTrue();
     }
 
    ```
@@ -137,12 +137,12 @@ Session cookies play a critical role in the functioning of web applications by f
    ```
    @Test
    void secureCookiesTest() {
-	loginPage.loginValidUser(USERNAME, PASSWORD);
-	homePage = new HomePage(this.driver);
-	Assertions.assertThat(homePage.getUsername()).contains(USERNAME);
-	driver.manage().deleteCookie(driver.manage().getCookieNamed("JSESSIONID"));
-	driver.navigate().refresh();
-	loginPage.loginValidUser(USERNAME, PASSWORD);
+		loginPage.loginValidUser(USERNAME, PASSWORD);
+		homePage = new HomePage(this.driver);
+		Assertions.assertThat(homePage.getUsername()).contains(USERNAME);
+		driver.manage().deleteCookie(driver.manage().getCookieNamed("JSESSIONID"));
+		driver.navigate().refresh();
+		loginPage.loginValidUser(USERNAME, PASSWORD);
     }
     
    ```
