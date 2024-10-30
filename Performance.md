@@ -125,20 +125,20 @@ The Spring Boot API accepts POST requests to store metrics.
 
 ### Lighthouse Testing
 
-LightHouseMetricsTest: A test class for running Lighthouse performance tests and sending metrics to the API.
+[LightHouseMetricsTest](src/test/java/com/anji/ui/LightHouseMetricsTest.java): A test class for running Lighthouse performance tests and sending metrics to the API.
 
 ### Selenium CDP Testing
 
-UIPerformanceTest: A test class for capturing performance metrics via Selenium CDP.
+[UIPerformanceTest](src/test/java/com/anji/ui/UIPerformanceTest.java): A test class for capturing performance metrics via Selenium CDP.
 Utilities
 
-TransformUtil: Transforms raw metrics into a standardized format.
+[TransformUtil](src/main/java/com/anji/sel/util/TransformUtil.java): Transforms raw metrics into a standardized format.
 
-FilterUtil: Filters out irrelevant metrics before storage.
+[FilterUtil](src/main/java/com/anji/sel/util/FilterUtil.java): Filters out irrelevant metrics before storage.
 
 ### Spring Boot API Client
 
-PerformanceClient: A client class for sending metrics to the Spring Boot API.
+[PerformanceClient](src/main/java/com/anji/sel/PerformanceClient.java): A client class for sending metrics to the Spring Boot API.
 
 
 ## Future Enhancements
