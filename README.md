@@ -2,7 +2,7 @@
 ## Features
 - A solid webdriver management using Junit5 Lifecycle Callbacks
 - Embedding security testing in Selenium Functional tests
-- Capturing and Analysing Web UI performance through Selenium Functional tests
+- Capturing and Analyzing Web UI performance metrics through Selenium Functional tests
 
 # Prerequisites to run tests
 - Java 17
@@ -208,6 +208,10 @@ Session cookies play a critical role in the functioning of web applications by f
     
    ```
  
+ 
+# Capturing and Analyzing Web UI performance metrics through Selenium Functional tests
+
+Click [here](Performance.md) for instructions
 
 
 
