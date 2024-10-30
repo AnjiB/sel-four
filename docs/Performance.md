@@ -153,7 +153,7 @@ Utilities
 
 ## Lighthouse - Performance & Accessbility Score
 
-![image info](./docs/images/lighthouse-scores.png)
+![image info](https://github.com/AnjiB/sel-four/blob/main/docs/images/lighthouse-scores.png)
 
 ## Lighthouse - Performance Metrics
 
