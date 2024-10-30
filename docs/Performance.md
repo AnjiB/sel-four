@@ -157,12 +157,12 @@ Utilities
 
 ## Lighthouse - Performance Metrics
 
-![image info](./docs/images/lighthouse-metrics.png)
+![image info](https://github.com/AnjiB/sel-four/blob/main/docs/images/lighthouse-metrics.png)
 
 
 ## Selenium 4 CDP - Performance Metrics
 
-![image info](./docs/images/cpd-performance-metrics.png)
+![image info](https://github.com/AnjiB/sel-four/blob/main/docs/images/cdp-peformance-metrics.png)
 
 
 
