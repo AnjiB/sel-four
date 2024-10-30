@@ -149,4 +149,21 @@ Utilities
 
 **AI-Powered Insights:** Implement AI-based predictive analysis on performance trends for proactive issue detection.
 
+# Grafana Visuals
+
+## Lighthouse - Performance & Accessbility Score
+
+![image info](./docs/images/lighthouse-scores.png)
+
+## Lighthouse - Performance Metrics
+
+![image info](./docs/images/lighthouse-metrics.png)
+
+
+## Selenium 4 CDP - Performance Metrics
+
+![image info](./docs/images/cpd-performance-metrics.png)
+
+
+
 
