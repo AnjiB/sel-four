@@ -211,7 +211,7 @@ Session cookies play a critical role in the functioning of web applications by f
  
 # Capturing and Analyzing Web UI performance metrics through Selenium Functional tests
 
-Click [here](Performance.md) for instructions
+Click [here](docs/Performance.md) for instructions
 
 
 
