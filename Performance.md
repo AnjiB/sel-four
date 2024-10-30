@@ -67,34 +67,32 @@ The following performance metrics are captured through Google Lighthouse and Sel
 
 ### Running the Project
  
- ** Install Lighthouse **
+ **Install Lighthouse**
  
  ````
- bash
  npm install -g lighthouse
  
  ````
  
  **Clone the Repository**:
 
-  ``````
-   bash
+  ````
    git clone https://github.com/AnjiB/selenium-performance.git
    cd selenium-performance
    docker-compose up --build
    
-   `````
+   ````
   
 These commands starts all necessary services including the Spring Boot API, MySQL database, and Grafana.
  
 
 Execute Lighthouse and Selenium CDP tests as part of your CI/CD pipeline to capture UI performance metrics.
 
-##Accessing Grafana:
+## Accessing Grafana:
 
 Grafana will be accessible at http://localhost:3000 (default login: admin/admin).
 
-##API Endpoints
+## API Endpoints
 The Spring Boot API accepts POST requests to store metrics.
 
 **POST:** /api/performance-metrics
@@ -125,11 +123,11 @@ The Spring Boot API accepts POST requests to store metrics.
 
 ## Code Overview
 
-###Lighthouse Testing
+### Lighthouse Testing
 
 LightHouseMetricsTest: A test class for running Lighthouse performance tests and sending metrics to the API.
 
-###Selenium CDP Testing
+### Selenium CDP Testing
 
 UIPerformanceTest: A test class for capturing performance metrics via Selenium CDP.
 Utilities
@@ -138,12 +136,12 @@ TransformUtil: Transforms raw metrics into a standardized format.
 
 FilterUtil: Filters out irrelevant metrics before storage.
 
-###Spring Boot API Client
+### Spring Boot API Client
 
 PerformanceClient: A client class for sending metrics to the Spring Boot API.
 
 
-##Future Enhancements
+## Future Enhancements
 
 **Enhanced Alerts:** Integrate with alerting tools for real-time notifications on metric drops.
 
