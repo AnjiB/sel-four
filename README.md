@@ -52,8 +52,6 @@ When entering sensitive information, such as passwords, on a web page, it is ess
 
 ### How to include this in Selenium UI tests?
 
-When we write UI tests, we can pass various types of XSS strigs to all input fields that accept text and make sure, XSS script does not get executed
-
    ````
    @Test
    void xssAttackTest() {
@@ -203,7 +201,7 @@ Session cookies play a critical role in the functioning of web applications by f
 
       driver.get("https://automationexercise.com/");
 
-      headersProcessed.join(); //
+      headersProcessed.join();
       assertionsList.forEach(softly -> softly.assertAll());
     }
   }
