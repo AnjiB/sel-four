@@ -7,6 +7,7 @@
 # Prerequisites to run tests
 - Java 17
 - Maven
+- Git
 - Docker Desktop
 - An IDE - IntelliJ / Eclipse or something similar
 
