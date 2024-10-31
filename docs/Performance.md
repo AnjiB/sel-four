@@ -127,20 +127,20 @@ The Spring Boot API accepts POST requests to store metrics.
 
 ### Lighthouse Testing
 
-[LightHouseMetricsTest](src/test/java/com/anji/ui/LightHouseMetricsTest.java): A test class for running Lighthouse performance tests and sending metrics to the API.
+[LightHouseMetricsTest](https://github.com/AnjiB/sel-four/blob/main/src/test/java/com/anji/ui/LightHouseMetricsTest.java): A test class for running Lighthouse performance tests and sending metrics to the API.
 
 ### Selenium CDP Testing
 
-[UIPerformanceTest](src/test/java/com/anji/ui/UIPerformanceTest.java): A test class for capturing performance metrics via Selenium CDP.
+[UIPerformanceTest](https://github.com/AnjiB/sel-four/blob/main/src/test/java/com/anji/ui/UIPerformanceTest.java): A test class for capturing performance metrics via Selenium CDP.
 Utilities
 
-[TransformUtil](src/main/java/com/anji/sel/util/TransformUtil.java): Transforms raw metrics into a standardized format.
+[TransformUtil](https://github.com/AnjiB/sel-four/blob/main/src/main/java/com/anji/sel/util/TransformUtil.java): Transforms raw metrics into a standardized format.
 
-[FilterUtil](src/main/java/com/anji/sel/util/FilterUtil.java): Filters out irrelevant metrics before storage.
+[FilterUtil](https://github.com/AnjiB/sel-four/blob/main/src/main/java/com/anji/sel/util/FilterUtil.java): Filters out irrelevant metrics before storage.
 
 ### Spring Boot API Client
 
-[PerformanceClient](src/main/java/com/anji/sel/PerformanceClient.java): A client class for sending metrics to the Spring Boot API.
+[PerformanceClient](https://github.com/AnjiB/sel-four/blob/main/src/main/java/com/anji/sel/PerformanceClient.java): A client class for sending metrics to the Spring Boot API.
 
 
 ## Future Enhancements
