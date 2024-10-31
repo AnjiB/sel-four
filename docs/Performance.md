@@ -62,7 +62,9 @@ The following performance metrics are captured through Google Lighthouse and Sel
 ### Prerequisites
 
 - Docker and Docker Compose
-- Java (for running the Spring Boot service)
+- Git
+- Maven
+- Java 17 (for running the Spring Boot service)
 - Node.js (for Lighthouse)
 
 ### Running the Project
