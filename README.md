@@ -58,7 +58,6 @@ When entering sensitive information, such as passwords, on a web page, it is ess
    void xssAttackTest() {
         this.driver.get("https://www.example.com");
         Assertions.assertThat(loginPage.getPasswordWE().getAttribute("type")).isEqualTo("password");
-        Assertions.assertThat(isAlertPresent).isFalse();
     }
    ````
    
@@ -75,7 +74,7 @@ A SQL injection attack consists of insertion or “injection” of a SQL query v
         this.driver.findElement(By.id("username")).sendKeys("\" or \"\"=\"");
         this.driver.findElement(By.id("password")).sendKeys("\" or \"\"=\"");
         this.driver.findElement(By.id("login")).click();
-      // Assert login is not successful
+      // Assert login is not successfull
     }
     
    ```
